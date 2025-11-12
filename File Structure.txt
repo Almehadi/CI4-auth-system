@@ -1,0 +1,27 @@
+ci4-auth-system/
+├── app/
+│   ├── Config/
+│   │   ├── Filters.php
+│   │   └── Routes.php
+│   ├── Controllers/
+│   │   ├── AuthController.php
+│   │   └── DashboardController.php
+│   ├── Database/Migrations/
+│   │   ├── 2023-01-01-000001_CreateEmployeesTable.php
+│   │   ├── 2023-01-01-000002_CreateUserGroupsTable.php
+│   │   ├── 2023-01-01-000003_CreateUserAccountsTable.php
+│   │   └── 2023-01-01-000004_CreateLoginAttemptsTable.php
+│   ├── Filters/
+│   │   └── AuthFilter.php
+│   ├── Models/
+│   │   ├── EmployeeModel.php
+│   │   ├── LoginAttemptModel.php
+│   │   ├── UserAccountModel.php
+│   │   └── UserGroupModel.php
+│   └── Views/
+│       ├── auth/
+│       │   ├── login.php
+│       │   └── register.php
+│       └── dashboard.php
+├── instructions.txt
+└── README.md

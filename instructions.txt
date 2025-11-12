@@ -1,0 +1,47 @@
+CODEIGNITER 4 AUTHENTICATION SYSTEM - INSTALLATION INSTRUCTIONS
+================================================================
+
+STEP 1: EXTRACT FILES
+----------------------
+Extract all files to your CodeIgniter 4 project root directory.
+The app/ folder should merge with your existing app/ folder.
+
+STEP 2: DATABASE SETUP
+----------------------
+1. Create a database for your application
+2. Update your database configuration in app/Config/Database.php
+3. Run migrations: php spark migrate
+
+STEP 3: TEST THE SYSTEM
+-----------------------
+1. Start the server: php spark serve
+2. Visit: http://localhost:8080/add-employee
+3. Add an employee first
+4. Visit: http://localhost:8080/register  
+5. Create a user account (admin privileges required)
+6. Login at: http://localhost:8080/login
+
+STEP 4: DEFAULT ADMIN SETUP (Alternative)
+-----------------------------------------
+If you need to create an admin user directly in database:
+
+INSERT INTO employees (oracleid, full_name, email, department, positions) 
+VALUES (1001, 'System Administrator', 'admin@company.com', 'IT', 'System Admin');
+
+INSERT INTO user_accounts (employee_id, username, password, user_group_id, is_active, status) 
+VALUES (1001, 'admin', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 1, 1, 'active');
+
+Default admin password: password
+
+STEP 5: SECURITY CONFIGURATION
+------------------------------
+- Change default passwords
+- Update session configuration if needed
+- Configure environment settings for production
+
+SUPPORT
+-------
+This is a complete working authentication system. For issues, check:
+- Database connection
+- File permissions
+- CodeIgniter 4 requirements
